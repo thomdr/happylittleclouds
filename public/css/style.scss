@@ -1,0 +1,81 @@
+$red: #ff4f4f;
+$blue: #4495ff;
+$green: #4cd17f;
+$white: #efefef;
+$orange: #ffb326;
+$black: #333;
+$shadow: 0 0 5px inset rgba(0,0,0,0.15), 0 0 2px rgba(0,0,0,0.1);
+$width: 1300px;
+
+@import 'reset', 'classes', 'navs', 'forms', 'masterworks', 'chat', 'exhibitions';
+
+h1, h2, h3, h4, h5, h6,
+p, li, span, a, strong, em, input, textarea, b, i, th, dt, dd,
+td, caption, figcaption, label, button, select, option, tr {
+	word-wrap: break-word;
+	word-break: break-word;   
+	color: $black;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+p, li, span, a, strong, em, input, textarea, b, i, th, dt, dd,
+td, caption, figcaption, label, button, select, option, tr  {
+	font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+}
+strong, b {
+	font-weight: bold;
+}
+em, i {
+	font-style: italic;
+}
+h4 {
+	font-size: 20px;
+	line-height: 26px;
+	margin-bottom: 3px;
+}
+h3 {
+	font-size: 26px;
+	line-height: 34px;
+	margin-bottom: 4px;
+}
+h2 {
+	font-size: 30px;
+	line-height: 38px;
+	margin-bottom: 6px;
+}
+h1 {
+	font-size: 40px;
+	line-height: 50px;
+	margin-bottom: 8px;
+}
+#container, #no-width-container, #no-padding-container {
+	box-shadow: $shadow;
+	background-color: #fff;
+	position: relative;
+	padding: 20px;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 100px auto 400px auto;
+}
+#container, #no-padding-container {
+	max-width: $width;
+}
+#no-padding-container {
+	padding: 0;
+}
+#background {
+	width: 100vw;
+	min-height: 100vh;
+	overflow: hidden;
+	position: fixed;
+	z-index: -1;
+	background-image: url('/../media/images/bg2.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+@import 'querries', 'lightbox-override';

@@ -1,0 +1,291 @@
+// Basic classes
+.danger {
+	color: $red
+}
+.success {
+	color: $green
+}
+.warning {
+	color: $orange;
+}
+.info {
+	color: $blue
+}
+.bold {
+	font-weight: bold;
+}
+.hidden {
+	display: none !important;
+}
+// Alerts
+.alert {
+	z-index: 9999;
+	max-width: 900px;
+	width: 70vw;
+	border-radius: 2px;
+	margin: 0 auto 50px auto;
+	padding: 15px;
+	box-sizing: border-box;
+	span {
+		line-height: 14px;
+		padding: 10px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+		font-size: 25px;
+	}
+}
+.alert-success {
+	background-color: lighten($green, 25%);
+	border: 1px solid $green;
+	p, span, strong {
+		color: darken($green, 35%);
+	}
+}
+.alert-error {
+	background-color: lighten($red, 15%);
+	border: 1px solid $red;
+	p, span, strong {
+		color: darken($red, 45%);
+	}
+}
+.alert-warning {
+	background-color: lighten($orange, 15%);
+	border: 1px solid $orange;
+	p, span, strong {
+		color: darken($orange, 45%);
+	}
+}
+.alert-info {
+	background-color: lighten($blue, 15%);
+	border: 1px solid $blue;
+	p, span, strong {
+		color: darken($blue, 45%);
+	}
+}
+// Containers
+.container {
+	max-width: 1100px;
+	padding: 20px;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 20px auto;
+	background-color: #fff;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+.description {
+	max-width: $width - 200px;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 100px;
+	box-sizing: border-box;
+	padding: 20px;
+	h2, p {
+		text-shadow: 0 0 5px rgba(255,255,255,0.8);
+		color: #151515;
+	}
+	p {
+		&::first-letter {
+			font-size: 1.25em;
+		}
+	}
+}
+// Buttons
+.button-blue, .button-green, .button-red, .button-orange {
+	border-radius: 1px;
+	box-shadow: 0 0 2px inset rgba(0,0,0,0.2), 0 0 2px rgba(0,0,0,0.1);
+	border: none;
+	color: $white;
+	padding: 7px;
+	box-sizing: border-box;
+	text-shadow: 0 0 1px rgba(0,0,0,0.5);
+	font-size: 1.1em;
+	cursor: pointer;
+	&:focus, &:hover {
+		outline: none;
+	}
+}
+.button-blue {
+	background-color: $blue;
+	&:focus, &:hover {
+		box-shadow: 0 0 2px inset rgba(0,0,0,0.2), 0 0 0 2px lighten($blue, 15%);
+	}
+}
+.button-green {
+	background-color: $green;
+	&:focus, &:hover {
+		box-shadow: 0 0 2px inset rgba(0,0,0,0.2), 0 0 0 2px lighten($green, 15%);
+	}
+}
+.button-red {
+	background-color: $red;
+	&:focus, &:hover {
+		box-shadow: 0 0 2px inset rgba(0,0,0,0.2), 0 0 0 2px lighten($red, 15%);
+	}
+}
+.button-orange {
+	background-color: $orange;
+	&:focus, &:hover {
+		box-shadow: 0 0 2px inset rgba(0,0,0,0.2), 0 0 0 2px lighten($orange, 15%);
+	}
+}
+// Contact
+.contact {
+	max-width: 600px;
+	width: 100%;
+	margin: 0 auto;
+	form {
+		padding-top: 40px;
+	}
+	#map {
+		margin-top: 40px;
+		height: 400px;
+	}
+	.send {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
+// Login
+.login {
+	max-width: 400px;
+	width: 100%;
+	margin: 0 auto;
+	h2 {
+		text-align: center;
+	}
+	form {
+		padding-top: 10px;
+	}
+}
+// Admin
+.admin-info {
+	padding: 20px;
+	margin-bottom: 30px;
+	a.button-blue {
+		text-decoration: none;
+		margin-top: 10px;
+		display: inline-block
+	}
+}
+.admin-users {
+	padding: 20px;
+	div {
+		&:first-of-type a {
+			margin-top: 0;
+		}
+		a {
+			border-left: 4px solid $green;
+			padding: 1px 10px;
+			margin-top: 16px;
+			display: inline-block;
+			text-decoration: none;
+		}
+	}
+}
+// Custom text
+.custom-text {
+	img {
+		width: initial !important;
+		max-width: 100%;
+		height: auto !important;
+	}
+	big {
+		font-size: larger;
+	}
+	small {
+		font-size: smaller;
+	}
+	kbd, samp {
+		font-family: monospace;
+	}
+	var {
+		font-style: italic;
+	}
+	ul {
+		list-style-type: initial;
+		padding-left: 25px;
+	}
+	blockquote {
+		background: #f9f9f9;
+		border-left: 6px solid #ccc;
+		margin: 10px 0;
+		padding: 8px 12px;
+		quotes: "\201C""\201D""\2018""\2019";
+		&:before {
+			color: #ccc;
+			content: open-quote;
+			font-size: 4em;
+			line-height: 0.1em;
+			margin-right: 0.25em;
+			vertical-align: -0.4em;
+		}
+		p {
+			display: inline;
+		}
+	}
+	.marker {
+		background-color: yellow;
+	}
+}
+// Browse
+.browse {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	h3 {
+		padding: 30px;
+	}
+	div {
+		margin: 20px;
+		padding: 10px;
+		width: 300px;
+		height: 350px;
+		box-sizing: border-box;
+		box-shadow: $shadow;
+		position: relative;
+		img {
+			max-width: 280px;
+			height: auto;
+			max-height: 280px;
+		}
+		form .button-red {
+			width: 280px;
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+		}
+	}
+}
+// Admin home
+.admin-home {
+	form {
+		margin-top: 0;
+	}
+}
+// Chat
+.admin-chat {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 20px 0 0 20px;
+	a {
+		display: block;
+		text-decoration: none;
+		margin: 0 20px 20px 0;
+		padding: 20px;
+		box-shadow: $shadow;
+		position: relative;
+		span {
+			background-color: $red;
+			width: 12px;
+			height: 12px;
+			display: block;
+			position: absolute;
+			top: 8px;
+			right: 8px;
+			border-radius: 50%;
+		}
+	}
+}

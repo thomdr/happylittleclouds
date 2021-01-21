@@ -1,0 +1,139 @@
+@media only screen and (max-width: 1300px) {
+	.top-nav {
+		height: $height * 2;
+		h1 {
+			text-align: center;
+		}
+		> div {
+			flex-direction: column;
+			ul {
+				justify-content: center;
+			}
+		}
+	}
+	.admin-nav {
+		position: fixed;
+		top: 140px;
+		ul {
+			justify-content: center;
+		}
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.top-nav {
+		height: $height+ 20px;
+		background-color: #fff;
+		backdrop-filter: none !important;
+		h1 {
+			margin-top: 20px;
+		}
+		&.bg {
+			background-color: #fff;
+		}
+		&.blur {
+			backdrop-filter: none;
+		}
+	}
+	.admin-nav {
+		background-color: transparent;
+		top: -1000px;
+		.menu {
+			background-color: rgba($black,0.8);
+			&.open {
+				top: 490px + 20px;
+			}
+		}
+	}
+	.top-nav .menu {
+		background-color: rgba(255,255,255,0.7);
+	}
+	.top-nav, .admin-nav {
+		#menu-toggle {
+			opacity: 100%;
+			pointer-events: initial;
+		}
+		.menu {
+			box-shadow: $shadow;
+			backdrop-filter: blur(3px);
+			width: 100%;
+			position: fixed;
+			top: -500px;
+			display: flex;
+			flex-direction: column;
+			transition: all 0.15s ease-in-out;
+			li, a {
+				width: 100%;
+				text-align: center;
+			}
+		}
+		.open {
+			top: $height + 20px;
+		}
+	}
+	.masterworks {
+		column-count: 2;
+	}
+	.admin-masterworks {
+		column-count: 3;
+	}
+}
+
+
+@media only screen and (max-width: 600px) {
+	p, li, span, a, strong, em, input, textarea, b, i, th, dt, dd,
+	td, caption, figcaption, label, button, select, option, tr  {
+		font-size: 15px;
+		line-height: 24px;
+	}
+	h4 {
+		font-size: 18px;
+		line-height: 22px;
+	}
+	h3 {
+		font-size: 21px;
+		line-height: 27px;
+	}
+	h2 {
+		font-size: 25px;
+		line-height: 32px;
+	}
+	h1 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	$p: 10px;
+	#container, #no-width-container, .description, .exhibitions
+	.information, .admin-info, .admin-users {
+		padding: $p;
+	}
+	.masterworks {
+		padding: $p $p 0 $p;
+		column-count: 1;
+		padding: 1
+	}
+	.admin-masterworks {
+		padding: $p $p 0 $p;
+		column-count: 2;
+	}
+	.admin-chat {
+		padding: $p 0 0 $p;
+	}
+	.exhibitions, .admin-exhibitions {
+		.calender {
+			padding: $p 0 0 $p;
+		}
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.admin-masterworks {
+		column-count: 1;
+	}
+}
+@media only screen and (max-width: 450px) {
+	h1 {
+		font-size: 25px;
+		line-height: 30px;
+	}
+}

@@ -1,0 +1,104 @@
+.chat, .chat-admin {
+    position: fixed;
+    bottom: -560px;
+    right: 0;
+    width: 100%;
+    max-width: 325px;
+    padding: 0 !important;
+    box-sizing: border-box;
+    background-color: #fff;
+	transition: all 0.2s ease-in-out;
+	&.open {
+		bottom: 0px;
+	}
+    > div:first-of-type {
+        height: 40px;
+        box-shadow: $shadow;
+        cursor: pointer;
+        p {
+            font-size: 1.3em;
+            padding: 0 10px;
+            line-height: 40px;
+        }
+	}
+	#error {
+		position: absolute;
+		bottom: 40px;
+		padding-left: 6px;
+	}
+    #messages {
+        height: 520px;
+        box-sizing: border-box;
+        padding: 10px 0 10px 0;
+        margin-bottom: 40px;
+        box-shadow: $shadow;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            width: 13px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #ccc;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: #aaa;
+        }
+        .left, .right {
+            width: 250px;
+            box-sizing: border-box;
+
+            p:first-of-type {
+                font-size: 0.7em;
+                color: #888;
+            }
+
+            p:last-of-type {
+                font-size: 0.95em;
+            }
+        }
+        .left {
+            background-color: rgba(0, 0, 200, 0.04);
+            padding: 0 7px 5px 15px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            margin: 10px auto 10px 0;
+        }
+        .right {
+            margin: 10px 0 10px auto;
+            background-color: rgba(0, 200, 0, 0.04);
+            padding: 0 15px 5px 7px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            p:first-of-type {
+                text-align: right;
+            }
+        }
+    }
+    .send {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        margin-top: 30px;
+        form {
+            box-shadow: none;
+            display: flex;
+            flex-direction: row;
+            input {
+                height: 40px;
+                margin: 0 !important;
+                &:first-of-type {
+                    width: 100%;
+                    padding: 5px 10px;
+                }
+                &:last-of-type {
+                    width: 120px;
+                }
+            }
+        }
+    }
+}
+.chat-admin {
+	position: relative;
+	bottom: 0;
+	height: 600px;
+}

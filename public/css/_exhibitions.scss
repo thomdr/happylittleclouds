@@ -1,0 +1,66 @@
+.exhibitions, .admin-exhibitions {
+	.calender {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 20px 0 0 20px;
+		a {
+			display: block;
+			text-decoration: none;
+			margin: 0 20px 20px 0;
+			width: 300px;
+			box-shadow: $shadow;
+			height: 100px;
+			position: relative;
+			span {
+				position: absolute;
+				text-align: center;
+				margin: 0 auto;
+				left: 0;
+				right: 0;
+				&:first-of-type {
+					top: 0;
+					bottom: 0;
+					line-height: 80px;
+					font-size: 1.7em;
+				}
+				&:last-of-type {
+					bottom: 7px;
+					font-size: 1.1em;
+					font-weight: bold;
+					width: 280px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+	}
+	.information {
+		padding: 20px;
+		box-sizing: border-box;
+	}
+}
+.admin-exhibitions {
+	.calender {
+		a {
+			width: 236px;
+			height: 70px;
+			span {
+				&:first-of-type {
+					font-size: 1.3em;
+					left: 10px;
+					top: 5px;
+					line-height: 26px;
+					text-align: left;
+				}
+				&:last-of-type {
+					left: 10px;
+					text-align: left;
+					width: 220px;
+					margin: 0;
+				}
+			}
+		}
+	}
+}

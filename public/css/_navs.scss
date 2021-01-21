@@ -1,0 +1,225 @@
+
+@keyframes line1 {
+    0% {
+        top: 11px
+    }
+    33% {
+        top: 23px;
+        transform: none
+    }
+    66% {
+        top: 23px;
+        transform: rotate(135deg)
+    }
+    100% {
+        top: 23px;
+        transform: rotate(135deg)
+    }
+}
+@keyframes line1return {
+    100% {
+        top: 11px
+    }
+    66% {
+        top: 23px;
+        transform: none
+    }
+    33% {
+        top: 23px;
+        transform: rotate(135deg)
+    }
+    0% {
+        top: 23px;
+        transform: rotate(135deg)
+    }
+}
+@keyframes line2 {
+    0% {
+        top: 23px
+    }
+    33% {
+        top: 23px;
+        transform: none
+    }
+    66% {
+        top: 23px;
+        transform: rotate(225deg)
+    }
+    100% {
+        top: 23px;
+        transform: rotate(225deg)
+    }
+}
+@keyframes line2return {
+    100% {
+        top: 23px
+    }
+    66% {
+        top: 23px;
+        transform: none
+    }
+    33% {
+        top: 23px;
+        transform: rotate(225deg)
+    }
+    0% {
+        top: 23px;
+        transform: rotate(225deg)
+    }
+}
+@keyframes line3 {
+    0% {
+        top: 35px
+    }
+    33% {
+        top: 23px;
+        transform: none
+    }
+    66% {
+        top: 23px;
+        transform: rotate(225deg)
+    }
+    100% {
+        top: 23px;
+        transform: rotate(225deg)
+    }
+}
+@keyframes line3return {
+    100% {
+        top: 35px
+    }
+    66% {
+        top: 23px;
+        transform: none
+    }
+    33% {
+        top: 23px;
+        transform: rotate(225deg)
+    }
+    0% {
+        top: 23px;
+        transform: rotate(225deg)
+    }
+}
+$height: 70px;
+.top-nav, .admin-nav {
+	z-index: 9000;
+	width: 100%;
+	height: $height;
+	ul {
+		display: flex;
+		flex-direction: row;
+		li {
+			a {
+				height: $height;
+				line-height: $height;
+				text-decoration: none;
+				display: block;
+				padding: 0 20px;
+				box-sizing: border-box;
+			}
+		}
+	}
+}
+.top-nav {
+	position: sticky;
+	top: 0;
+	transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+	background-color: rgba(255,255,255,0.7);
+	box-shadow: 0 0 1px inset rgba(0,0,0,0.15), 0 0 5px rgba(0,0,0,0.1);
+	backdrop-filter: blur(3px);
+	> div {
+		height: $height;
+		max-width: $width;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	h1 {
+		line-height: 70px;
+		margin-bottom: 0;
+	}
+	ul {
+		justify-content: space-between;
+		li {
+			&.active {
+				background-color: rgba(0,0,0,0.03);
+				box-shadow: $shadow;
+			}
+			a {
+				font-size: 1.25em;
+			}
+		}
+	}
+	#menu-toggle {
+		opacity: 0%;
+		pointer-events: none;
+		cursor: pointer;
+		width: 55px;
+		height: 40px;
+		position: fixed;
+		top: -5px;
+		right: 0;
+		span {
+			width: 40px;
+			height: 4px;
+			left: 7px;
+			background-color: $black;
+			position: absolute;
+			border-radius: 2px
+		}
+	}
+	@mixin line($name) {
+		animation: $name 0.35s ease-in-out 1 forwards;
+	}
+	.line-1 {
+		top: 11px;
+		&.line-animation {
+			@include line(line1); 
+		}
+		&.line-animation-return {
+			@include line(line1return); 
+		}
+	}
+	.line-2 {
+		top: 23px;
+		margin: auto;
+		&.line-animation {
+			@include line(line2); 
+		}
+		&.line-animation-return {
+			@include line(line2return); 
+		}
+	}
+	.line-3 {
+		top: 35px;
+		&.line-animation {
+			@include line(line3); 
+		}
+		&.line-animation-return {
+			@include line(line3return); 
+		}
+	}
+}
+.admin-nav {
+	position: fixed;
+	top: $height;
+	$height: 50px;
+	background-color: $black;
+	ul {
+		max-width: $width;
+		margin: 0 auto;
+		justify-content: flex-end;
+		li {
+			&.active {
+				background-color: rgba(255,255,255,0.15);
+				box-shadow: $shadow;
+			}
+			a {
+				font-size: 1.15em;
+				color: #fff;
+			}
+		}
+	}
+}
